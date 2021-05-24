@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIPE API</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+  <section>
+    <div class="max-w-screen-sm mx-auto">
+      <form action="" method="get" class="my-6 grid grid-cols-1 gap-4">
+        <div>
+          <label class="text-sm text-gray-500 block">URI</label>
+          <input type="url" required name="uri" class="mt-2 w-full outline-none p-2 text-sm border border-gray-400 rounded-sm bg-transparent">
+        </div>
+        <div>
+          <button class="w-full focus:outline-none border border-gray-200 bg-gray-200 p-4 py-2 transition-all duration-500 rounded-sm bg-blue-800 border text-gray-100 border-blue-800">
+            Filtrar
+          </button>
+        </div>
+      </form>
+      <pre id="response-data">
+      </pre>
+    </div>
+  </section>
+
+  <script src="./index.js"></script>
+</body>
+</html>
