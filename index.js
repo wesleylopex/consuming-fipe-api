@@ -25,5 +25,26 @@ async function getResponse (uri) {
 
 function showResponse (response) {
   const responseElement = document.querySelector('#response-data')
-  responseElement.innerHTML = JSON.stringify(response, undefined, 2)
+
+  responseElement.innerHTML = ''
+
+  response.forEach(el => {
+    const element = document.createElement('div')
+    
+    element.classList.add('bg-white')
+    element.classList.add('rounded-sm')
+    element.classList.add('p-4')
+    element.classList.add('shadow-md')
+
+    for (const data in el) {
+      const dataElement = document.createElement('p')
+      dataElement.innerText = `${data}: ${el[data]}`
+
+      element.appendChild(dataElement)
+    }
+
+    responseElement.appendChild(element)
+  })
+
+  // responseElement.innerHTML = JSON.stringify(response, undefined, 2)
 }
